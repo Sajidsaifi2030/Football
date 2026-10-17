@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="game">
+
+        <h1> &#9917; Football Challenge Game</h1>
+        <p> Two Player Football Game</p>
+        <div class="score">
+            Player 1: 
+            <span id="score1">0</span>
+            Player 2:
+            <span id="score2">0</span>
+        </div>
+
+        <h3 id="turn"> Player 1's Turn </h3>
+        <div class="pitch" id="pitch">
+            <div class="center-circle"></div>
+            <div class="penalty"></div>
+            <div class="goal"></div>
+            <div class="offside-line" id="line"></div>
+
+            <div class="player passer" id="passer"> P </div>
+            <div class="player defender" id="defender"> D </div>
+            <div class="player attacker" id="attacker"> A </div>
+            <div class="ball" id="ball"></div>
+        </div>
+
+        <section class="controls">
+
+            <h3> Player 1: Attacker </h3>
+            <label for="attackerRange"> Attacker Position </label>
+            <input type="range" id="attackerRange" min="10" max="94" value="65">
+
+            <h3> Player 2: Defender </h3>
+            <label for="defenderRange"> Defender Position </label>
+            <input type="range" id="defenderRange" min="20" max="88" value="58">
+
+            <h3> Ball Position </h3>
+            <label for="ballRange"> Position at the moment of the pass </label>
+            <input type="range" id="ballRange" min="10" max="90" value="50">
+
+        </section>
+
+        <button id="checkBtn"> &#9917; Check Offside </button>
+        <button id="nextBtn"> Next Round </button>
+        <button id="resetBtn"> Reset Game </button>
+
+        <div id="result" aria-live="polite">
+            Set Postition & Check the Result !!!
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
