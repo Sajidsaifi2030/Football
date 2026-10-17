@@ -1,0 +1,194 @@
+*{
+    box-sizing:border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background: #10251d;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.game {
+    max-width: 700px;
+    margin: auto;
+}
+
+h1 {
+    color: #ffe66d;
+}
+
+p {
+    color: #d6e8dd;
+}
+
+.score {
+    margin: 15px;
+    color: #ffe66d;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.pitch {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border: 3px solid white;
+    border-radius: 10px;
+    background: repeating-linear-gradient(
+        90deg,
+        #23834b 0px,
+        #23834b 70px,
+        #2b9456 70px,
+        #2b9456 140px
+    );
+}
+
+.pitch::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 100%;
+    border-left: 2px solid #ffffff90;
+}
+
+.center-circle {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border: 2px solid #ffffff90;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.penalty {
+    position: absolute;
+    right: 0;
+    top: 25%;
+    height: 50%;
+    width: 18%;
+    border:  2px solid #ffffffbb;
+    border-right: none;
+}
+
+.goal {
+    position: absolute;
+    right: 0;
+    top: 39%;
+    height: 22%;
+    width: 15px;
+    border: 3px solid white;
+    background: #ddd;
+}
+
+.player { 
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 3px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.attacker {
+    background: #f5ca36;
+    color: #222;
+}
+
+.defender {
+    background: #e84b4b;
+}
+
+.passer {
+    background: #3478e5;
+}
+
+.ball {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.offside-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-left: 3px dashed#ffeb3b;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.controls {
+    margin: 18px ;
+    padding: 15px;
+    border-radius: 12px;
+    background: #1d3c2e;
+    text-align: left;
+}
+
+.label {
+    display: block;
+    margin: 12px 0 6px;
+}
+
+.input[type="range"] {
+    width: 100%;
+    accent-color: #ffe66d;
+    cursor: pointer;
+}
+
+.button {
+    padding: 12px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    background: #ffe66d;
+    color: #17251c;
+}
+
+.button:hover {
+    background: #fff19b;
+}
+
+#result {
+    padding: 15px;
+    margin-top: 12px;
+    border-radius: 10px;
+    background: #1d3c2e;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+@media (max-width: 480px) {
+
+    .body {
+        padding: 10px;
+    }
+
+    .pitch {
+        width: 32px;
+        height: 32px;
+        font-size: 15px;
+    }
+
+    .button {
+        padding: 10px;
+    }
+
+}
